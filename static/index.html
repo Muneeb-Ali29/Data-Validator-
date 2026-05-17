@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict Data Validator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Data Validator</h1>
+            <p>Upload or drag & drop your JSON file to strictly validate product inventory data.</p>
+        </header>
+
+        <main>
+            <div class="upload-zone" id="uploadZone">
+                <div class="upload-content">
+                    <svg class="upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                    </svg>
+                    <p class="upload-text">Drag and drop your JSON file here</p>
+                    <p class="upload-sub">or <span class="browse-link">browse</span> to choose a file</p>
+                    <input type="file" id="fileInput" accept=".json" class="hidden-input">
+                </div>
+            </div>
+            
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Validating...</p>
+            </div>
+
+            <div id="results" class="results-container hidden">
+                <h2>Validation Results</h2>
+                <div class="summary-cards">
+                    <div class="card card-total">
+                        <h3>Total Processed</h3>
+                        <p class="count" id="totalCount">0</p>
+                    </div>
+                    <div class="card card-valid">
+                        <h3>Valid Products</h3>
+                        <p class="count" id="validCount">0</p>
+                    </div>
+                    <div class="card card-invalid">
+                        <h3>Invalid Products</h3>
+                        <p class="count" id="invalidCount">0</p>
+                    </div>
+                </div>
+
+                <div class="error-list-container hidden" id="errorContainer">
+                    <h3>Validation Errors</h3>
+                    <ul class="error-list" id="errorList">
+                        <!-- Errors will be populated here -->
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
