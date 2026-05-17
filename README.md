@@ -9,37 +9,6 @@ This project is a strict configuration and data validation tool built with Pytho
 - **FastAPI Web Interface**: Exposes an endpoint (`/api/validate`) to upload and validate JSON files containing product data. It also serves a static HTML frontend.
 - **CLI Tool**: A standalone command-line script (`main.py`) to validate local JSON files directly from your terminal.
 
-## Prerequisites
-
-- Python 3.8+
-- The dependencies listed in `requirements.txt`
-
-## Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone <your-repository-url>
-   cd "Project 1 (Data Validator) - Fast API"
-   ```
-
-2. **Create a virtual environment (optional but recommended):**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use: venv\Scripts\activate
-   ```
-
-3. **Install the dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Environment Variables:**
-   Create a `.env` file in the root of the project with the following contents:
-   ```env
-   API_KEY=your_secret_api_key_here
-   DEBUG_MODE=True
-   ```
-
 ## Usage
 
 ### 1. Using the Command-Line Interface (CLI)
